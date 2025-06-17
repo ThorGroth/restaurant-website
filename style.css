@@ -35,10 +35,20 @@ header p {
     margin-bottom: 20px;
 }
 
+header nav {
+    border: 2px solid #e6bcbc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background-color: #5a0000;
+    box-shadow: 0 0 10px rgba(255, 204, 204, 0.2);
+}
+
 header ul {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -118,10 +128,46 @@ main img:hover {
     box-shadow: 0 6px 15px rgba(128, 0, 0, 0.5);
 }
 
+table {
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 90%;
+    max-width: 900px;
+    border: 3px solid #800000;
+    border-radius: 10px;
+    background-color: #fff5f5;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(128, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+tbody tr {
+    border: 2px solid #a33;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #fff8f8;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #ffe6e6;
+}
+
 dl {
     text-align: center;
     margin: 30px auto;
     max-width: 400px;
+    padding: 20px;
+    border: 2px solid #a33;
+    border-radius: 10px;
+    background-color: #fff0f0;
+    box-shadow: 0 0 8px rgba(128, 0, 0, 0.15);
 }
 
 dt {
