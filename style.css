@@ -1,0 +1,155 @@
+/* Grundlayout */
+body {
+    font-family: Georgia, serif;
+    background-color: #f8f1f1;
+    margin: 0;
+    padding: 0;
+    color: #2c0d0d;
+    animation: fade-in 1.5s ease-in;
+}
+
+/* Header */
+header {
+    background-color: #4b0000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 48px;
+    color: #ffdddd;
+    margin: 0;
+    font-style: italic;
+    transition: text-shadow 0.4s ease;
+}
+
+header h1:hover {
+    text-shadow: 0 0 10px #ffcccc;
+}
+
+header p {
+    font-size: 18px;
+    color: #e6bcbc;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+header li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffcccc;
+    font-style: italic;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+header li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #ff6666;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+header li a:hover::after,
+header li a[aria-current="page"]::after {
+    width: 100%;
+}
+
+header li a:hover {
+    color: #ff6666;
+    font-weight: bold;
+}
+
+/* Main */
+main {
+    text-align: center;
+    padding: 40px 20px;
+    animation: slide-up 1s ease-out;
+}
+
+main h2 {
+    font-size: 28px;
+    color: #800000;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+main p {
+    font-size: 18px;
+    color: #5c0a0a;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+main img {
+    max-width: 90%;
+    height: auto;
+    border: 5px solid #800000;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+main img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(128, 0, 0, 0.5);
+}
+
+dl {
+    text-align: center;
+    margin: 30px auto;
+}
+
+dt {
+    font-weight: bold;
+    color: #800000;
+    margin-top: 10px;
+}
+
+dd {
+    font-style: italic;
+    color: #5c0a0a;
+    margin-bottom: 10px;
+}
+/* Footer */
+footer {
+    background-color: #330000;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #e6d6d6;
+    font-style: italic;
+}
+
+/* Animationen */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
